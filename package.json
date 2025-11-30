@@ -4,7 +4,8 @@
   "description": "Міні-сервіс для створення персонального списку речей у подорож",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,21 @@
   "bugs": {
     "url": "https://github.com/Ambjorn772/travel-checklist-generator/issues"
   },
-  "homepage": "https://github.com/Ambjorn772/travel-checklist-generator#readme"
+  "homepage": "https://github.com/Ambjorn772/travel-checklist-generator#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
